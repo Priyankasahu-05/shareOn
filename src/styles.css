@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.17 0.006 270);
+  --color-foreground: oklch(0.98 0 0);
+  --color-ink: oklch(1 0 0);
+  --color-card: oklch(0.21 0.006 270);
+  --color-muted: oklch(0.24 0.006 270);
+  --color-muted-foreground: oklch(0.7 0.01 270);
+  --color-border: oklch(1 0 0 / 8%);
+  --color-ring: oklch(1 0 0 / 10%);
+  --color-primary: oklch(0.66 0.22 285);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-accent: oklch(0.78 0.17 175);
+  --color-highlight: oklch(0.74 0.2 35);
+  --color-highlight-foreground: oklch(1 0 0);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+}
+
+@layer utilities {
+  .bg-gradient-brand { 
+    background: linear-gradient(135deg, oklch(0.66 0.22 285), oklch(0.78 0.17 175)); 
+  }
+  .bg-gradient-cta { 
+    background: linear-gradient(135deg, oklch(0.74 0.2 35), oklch(0.66 0.22 285)); 
+  }
+  .text-gradient-brand {
+    background: linear-gradient(135deg, oklch(0.78 0.17 175), oklch(0.66 0.22 285));
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+  }
+  .bg-hero-glow {
+    background: radial-gradient(60% 50% at 50% 0%, oklch(0.66 0.22 285 / 0.25), transparent 70%);
+  }
+  .shadow-card { 
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.04), 0 1px 2px oklch(0 0 0 / 0.3); 
+  }
+  .shadow-soft { 
+    box-shadow: 0 10px 30px oklch(0 0 0 / 0.4); 
+  }
+  .shadow-glow { 
+    box-shadow: 0 20px 60px oklch(0.66 0.22 285 / 0.35); 
+  }
+}
